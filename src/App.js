@@ -21,7 +21,6 @@ function App() {
       if(response.status<400){
         setError('')
       }
-      console.log(response.data)
       setWeather(response.data)
     }catch(err){
       setError(err.response.data.message)
