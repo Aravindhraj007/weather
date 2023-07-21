@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 function App() {
+  const APIKEY = 'ee73ec52a4bb55144a9f1a9b4cd0e88b'
   const [searchItem, setSearchItem] = useState('')
   const [item, setItem] = useState('tamilnadu')
   const [weather, setWeather] = useState({})
@@ -16,7 +17,7 @@ function App() {
   useEffect(()=>{
     const fetchWeather = async() => {
     try{
-      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${item}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${item}&appid=${APIKEY}&units=metric`)
       if(response.status<400){
         setError('')
       }
