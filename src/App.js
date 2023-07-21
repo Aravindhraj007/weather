@@ -17,6 +17,9 @@ function App() {
     const fetchWeather = async() => {
     try{
       const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${item}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
+      if(response.status<400){
+        setError('')
+      }
       console.log(response.data)
       setWeather(response.data)
     }catch(err){
@@ -26,8 +29,11 @@ function App() {
       setSearchItem('')
     }
   }
-
   (async() => fetchWeather())()
+  
+  return () => {
+    setWeather({})
+  }
   }, [item])
 
   const handleSearch = (e) =>{
