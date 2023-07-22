@@ -67,4 +67,42 @@ const MainElement = styled.main`
             font-size: 1rem;
         }
     }
+
+
+    @media only screen and (max-width: 500px){
+        h2{
+            margin-top: 0;
+            padding-top: 30px;
+        }
+
+        img{
+            width: 220px;
+            height: auto;
+        }
+
+        p{
+            margin-top: 0px;
+            padding-top: 20px;
+            font-size: 3rem;
+            span{
+                font-size: 1.3rem;
+                position: absolute;
+                margin-top: 4px;
+            }
+        }
+
+        section{
+            margin-top: 30px;
+            padding: 0 2px;
+            width: 100%;
+            display: block;
+            text-align: center;
+            h4{
+                padding: 10px;
+            }
+            span{
+                font-size: 0.7rem;
+            }
+        }
+    }
 `

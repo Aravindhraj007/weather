@@ -57,15 +57,28 @@ const HeaderElement = styled.header`
     }
     
     @media only screen and (max-width: 500px){
-        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         input, button{
-            font-size: 1rem;
-            padding: 5px 8px;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            
+            &:focus{
+                border: none;
+            }
         }
+        input{
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        button{
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
         input:focus + button{
-            outline: none;
-            border: 1px solid #36e4ff;
-            border-left: none
+            border: none;
         }
-    }
+        }
 `

@@ -15,8 +15,11 @@ p{
 
 @media only screen and (max-width: 500px){
   .App{
-    width: 400px;
+    width: 100vw;
     height: 100vh;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+  }
+  p{
+    padding-top: 0;
   }
 }
