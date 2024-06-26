@@ -7,7 +7,7 @@ import axios from 'axios'
 function App() {
   const APIKEY = 'ee73ec52a4bb55144a9f1a9b4cd0e88b'
   const [searchItem, setSearchItem] = useState('')
-  const [item, setItem] = useState('tamilnadu')
+  const [item, setItem] = useState('chennai')
   const [weather, setWeather] = useState({})
   const [isloading, setLoading] = useState(true)
   const [isError, setError] = useState('')
