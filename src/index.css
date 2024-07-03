@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
+#root {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Arvo', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
